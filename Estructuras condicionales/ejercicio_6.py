@@ -21,3 +21,18 @@ import random
 numeros_aleatorios = [random.randint(1, 100) for i in range(50)] 
 Nota: el bloque de código anterior crea una lista con 50 números entre 1 y 100 elegidos de 
 forma aleatoria. """
+
+import random
+from statistics import mode, median, mean
+numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+moda = mode(numeros_aleatorios)
+mediana = median(numeros_aleatorios)
+media = mean(numeros_aleatorios)
+print(f"Números aleatorios: {numeros_aleatorios}")
+print(f"Moda: {moda}, Mediana: {mediana}, Media: {media}")
+if media > mediana > moda:
+    print("Sesgo positivo o a la derecha")
+elif media < mediana < moda:
+    print("Sesgo negativo o a la izquierda")
+else:
+    print("Sin sesgo")
