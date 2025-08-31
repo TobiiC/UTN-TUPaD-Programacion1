@@ -6,3 +6,19 @@ dependiendo de la opción que desee:
 El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el 
 usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(), 
 lower() y title() de Python para convertir entre mayúsculas y minúsculas. """
+
+nombre = input("Ingrese su nombre: ")
+opcion = input("""
+               Menú de Opciones:
+               Opción 1 para mayúsculas
+               Opción 2 para minúsculas  
+               Opción 3 para primera letra mayúscula: """)
+
+if opcion == "1":
+    print(nombre.upper())
+elif opcion == "2":
+    print(nombre.lower())
+elif opcion == "3":
+    print(nombre.title())
+else: 
+    print("La opción que seleccionó no es válida")     
