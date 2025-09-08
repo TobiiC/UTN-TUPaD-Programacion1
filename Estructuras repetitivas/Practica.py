@@ -6,6 +6,12 @@ while i <= 100:
     print(i)
     i += 1
 
+"""SOLUCIÓN CON FOR 1) Crea un programa que imprima en pantalla todos los números enteros desde 0 hasta 100 
+(incluyendo ambos extremos), en orden creciente, mostrando un número por línea. """
+
+for i in range(101):
+    print(i)
+
 """2) Desarrolla un programa que solicite al usuario un número entero y determine la cantidad de 
 dígitos que contiene. """
 
@@ -42,14 +48,11 @@ un 0. """
 
 numero = int(input("Ingrese un número entero para sumar: "))
 suma = 0
-if numero != 0:
-    while numero != 0:
+while numero != 0:
         suma += numero
         numero = int(input("Ingrese un número entero (0 para finalizar): "))
 
-    print("La suma total es:", suma)
-else:
-    print("La suma total es: 0")
+print("La suma total es:", suma)
 
 """5) Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el 
 programa debe mostrar cuántos intentos fueron necesarios para acertar el número."""
@@ -62,7 +65,10 @@ intento = int(input("Adivina el número (entre 0 y 9): "))
 contador_intentos = 1
 
 while intento != numero_aleatorio:
-    intento = int(input("Incorrecto. Intenta de nuevo: "))
+    if intento < numero_aleatorio:
+        intento = int(input("El número es mayor, Intenta de nuevo: "))
+    else:
+        intento = int(input("El número es menor, Intenta de nuevo: "))
     contador_intentos += 1
 
 print(f"¡Correcto! Adivinaste el número en {contador_intentos} intentos.")
