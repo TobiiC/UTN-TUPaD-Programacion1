@@ -60,7 +60,7 @@ producto. Recorrer la lista de productos y, si lo encuentra, mostrar todos sus d
 no existe, mostrar un mensaje de error. """
 
 def buscar_producto(productos):
-    
+
     if not productos:
         print("La lista está vacía, no se puede buscar.")
         return
@@ -101,10 +101,3 @@ for producto in productos:
 
 buscar_producto(productos)
 guardar_productos(productos)
-
-
-
-
-
-
-
