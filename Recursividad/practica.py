@@ -9,12 +9,14 @@ def factorial(numero):
         return numero * factorial(numero - 1)
 
 numero = int(input("Ingrese un número entero positivo: ")) 
+
 for i in range(1, numero + 1):
     print(f"El numero factorial de {i} es: {factorial(i)}")
 
 """2) Crea una función recursiva que calcule el valor de la serie de Fibonacci en la posición 
 indicada. Posteriormente, muestra la serie completa hasta la posición que el usuario 
 especifique. """
+
 def fibonacci(n):
     if n <= 0:
         return 0
@@ -24,6 +26,7 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
     
 posicion = int(input("Ingrese la posición hasta donde desea ver la serie de Fibonacci: "))
+
 for i in range(posicion):
     print(f"Fibonacci en la posición {i} es: {fibonacci(i)}")
 
@@ -36,6 +39,7 @@ def potencia(base, exponente):
         return 1
     else:
         return base * potencia(base, exponente - 1)
+    
 base = float(input("Ingrese la base: "))
 exponente = int(input("Ingrese el exponente (entero positivo): "))
 
@@ -51,6 +55,7 @@ def decimal_a_binario(n):
         return "1"
     else:
         return decimal_a_binario(n // 2) + str(n % 2)
+    
 numero = int(input("Ingrese un número entero positivo en base decimal: "))
 print(f"La representación en binario de {numero} es: {decimal_a_binario(numero)}")
 
@@ -111,6 +116,7 @@ def contar_bloques(n):
         return 1
     else:
         return n + contar_bloques(n - 1)
+    
 nivel_inferior = int(input("Ingrese el número de bloques en el nivel más bajo: "))
 print(f"El total de bloques necesarios para construir la pirámide es: {contar_bloques(nivel_inferior)}")
 
